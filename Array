@@ -120,3 +120,84 @@ int main(){
 	cout<<"INVALID";
 return 0;
 }
+//If you want to chack the value in ARRAY by using sequential search ::
+#include<iostream>
+using namespace std;
+int main(){
+	int n,i,arr[10],loc=-1;
+	for(i=1; i<10; i++){
+		cout<<"Enter the number to safe in array  ";
+		cin>>arr[i];
+	}
+	cout<<"Enter the number you want to check in array ";
+	cin>>n;
+	for(i=1; i<10; i++){
+		if(arr[i]==n){
+			loc=i;
+			break;
+		}}
+		if(loc!=-1){
+			cout<<"The number you search is in index "<<loc;
+		}
+		else 
+		cout<<"Invalid";
+			return 0;}
+//If you want to chack the value in ARRAY by using Binary search ::
+#include<iostream>
+#include<algorithm>
+using namespace std;
+int main(){
+	int arr[10]={10,20,30,40,50,60,70,80,90,100};
+	int index,nv,start=0,end=9,loc=-1,mid,n,i;
+
+	cout<<"Enter the value you want to check ";
+	cin>>n;
+	while(start<=end){
+		mid=(start+end)/2;
+	if(arr[mid]==n){
+		loc=mid;
+		break;}
+		else if(n<arr[mid])
+		end=mid-1;
+		else 
+		start=mid+1;
+	}
+	if(loc!=-1)
+	cout<<"This Number is at Index "<<loc;
+	else 
+	cout<<":Invalid:";
+	
+return 0;}
+//If You want to ADD New value in ARRY you can use this 1 METHOD:::
+#include<iostream>
+#include<algorithm>
+using namespace std;
+int main(){
+	int arr[10]={10,20,30,40,50,60,70,80,90,100};
+	int index,nv,start=0,end=9,loc=-1,mid,n,i;
+	cout<<"Enter the index you want to change ";
+	cin>>index;
+	cout<<"Enter the new value ";
+	cin>>nv;  //nv=New Value 
+	arr[index]=nv;
+	sort(arr,arr+10);
+	cout<<"Enter the value you want to check ";
+	cin>>n;
+	while(start<=end){
+		mid=(start+end)/2;
+	if(arr[mid]==n){
+		loc=mid;
+		break;}
+		else if(n<arr[mid])
+		end=mid-1;
+		else 
+		start=mid+1;
+	}
+	if(loc!=-1)
+	cout<<"This Number is at Index "<<loc;
+	else 
+	cout<<":Invalid:";
+	
+return 0;}
+//If you want to again fix value or you want to addd value in Empty Array::
+  arr[2]=33; //you add value in this arry index and value then array update
