@@ -1,0 +1,21 @@
+//bubble sorting
+#include <iostream>
+#include <algorithm>
+using namespace std;
+int main(){
+int i,arr[5];
+for(i=0; i<5; i++){
+cout<<"Enter the number you want to safe in array ";
+cin>>arr[i];
+}
+cout<<"Values in Array ";
+for(i=0; i<5; i++){
+	cout<<arr[i]<<"\t";
+}
+cout<<endl;
+sort(arr, arr+5);
+cout<<endl<<endl;
+for(i=0; i<5; i++)
+cout<<arr[i]<<" ";
+return 0;	
+}
