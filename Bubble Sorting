@@ -33,7 +33,7 @@ return 0;
 using namespace std;
 
 int main() {
-    int arr[] = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
+    int arr[] = {-2, 1, -3, 4, -1, 2, 1, -5, 4};// yaha pa asa ha ka jo positive values han wo sabb ka sum karta ha lakin jab - aya ga to phr shoro sa shoro karta ha ya kam 
     int size = sizeof(arr) / sizeof(arr[0]);
 
     int maxSum = arr[0];  
