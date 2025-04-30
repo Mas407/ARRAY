@@ -1,0 +1,42 @@
+#include<iostream>
+using namespace std;
+
+int main() {
+    int arr[5];
+    
+    // Input elements for array
+    for(int i = 0; i < 5; i++) {
+        cout << "Enter the value for position " << i << ": ";
+        cin >> arr[i];
+    }
+
+    // Print the original array
+    cout << "Original Array: ";
+    for(int i = 0; i < 5; i++) {
+        cout << arr[i] << " \t";
+    }
+    cout << endl << endl;
+
+    // The value to delete
+    int deletev = arr[2];  // Let's delete the element at index 2
+
+    // New array to store updated values
+    int index[5];
+    int newv = 0;
+
+    // Copy elements to the new array, skipping the deleted value
+    for(int i = 0; i < 5; i++) {
+        if(arr[i] != deletev) {
+            index[newv++] = arr[i];  // Copy non-deleted elements
+        }
+    }
+
+    // Print the updated array (valid values only)
+    cout << "Updated Array: ";
+    for(int i = 0; i < newv; i++) {
+        cout << index[i] << " \t";  // Only print up to newv elements
+    }
+    cout << endl;
+
+    return 0;
+}
